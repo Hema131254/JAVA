@@ -1,0 +1,34 @@
+class Person {
+    String name;
+    int age;
+
+    Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void displayInfo() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+class Student extends Person {
+    String college;
+
+    Student(String name, int age, String college) {
+        super(name, age);
+        this.college = college;
+    }
+
+    void displayStudent() {
+        displayInfo();
+        System.out.println("College: " + college);
+    }
+}
+
+public class InheritanceExample {
+    public static void main(String[] args) {
+        Student s = new Student("Hema", 21, "SIMATS");
+        s.displayStudent();
+    }
+}
